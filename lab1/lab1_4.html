@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 1.4 — Изображения</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        img { max-width: 100%; height: auto; }
+        figure { margin: 20px 0; }
+        figcaption { font-style: italic; color: #555; margin-top: 5px; }
+        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; }
+        hr { margin: 30px 0; border: none; border-top: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Изображения</h1>
+
+        <h2>Элемент <code>img</code></h2>
+        <p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
+        
+        <p><b>Задание 1.</b> Вставьте на страницу изображение <code>aquaria.jpg</code></p>
+        <img src="images/aquaria.jpg" alt="Аквариум с рыбками" width="400">
+        <p><em>Рисунок 1: Аквариум</em></p>
+
+        <hr>
+
+        <h2>Альтернативный текст</h2>
+        <p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено.</p>
+        
+        <p><b>Задание 2.</b> Вставьте на страницу изображение с ошибочной ссылкой <code>slonn.png</code></p>
+        <img src="images/slonn.png" alt="Это изображение не найдено — показывается альтернативный текст" width="300">
+        <p><em>Рисунок 2: Если картинка не загрузится, вы увидите этот текст</em></p>
+
+        <hr>
+
+        <h2>Размеры изображения</h2>
+        <p>Атрибуты <code>width</code> и <code>height</code> задают размеры области изображения.</p>
+        
+        <p><b>Задание 3.</b> Вставьте на страницу изображение <code>redcat.jpg</code> с указанием его ширины и высоты.</p>
+        <img src="images/redcat.jpg" alt="Рыжий кот" width="300" height="200">
+        <p><em>Рисунок 3: Рыжий кот (300×200 px)</em></p>
+
+        <hr>
+
+        <h2>Адаптивные изображения (srcset + sizes)</h2>
+        <p>Для добавления гибких (responsive) изображений используют атрибуты <code>sizes</code> и <code>srcset</code>.</p>
+        
+        <p><b>Задание 4.</b> Вставьте изображение гриба в зависимости от размера экрана:</p>
+        <img 
+            src="images/mushroom.jpg" 
+            alt="Гриб"
+            sizes="(max-width: 576px) 100vw, (max-width: 768px) 100vw, (max-width: 992px) 50vw, 100vw"
+            srcset="
+                images/mushroom_portrait.jpg 576w,
+                images/mushroom_landscape.jpg 768w,
+                images/mushroom_retina.jpg 992w 2x,
+                images/mushroom.jpg 1200w
+            "
+            width="400"
+        >
+        <p><em>Рисунок 4: Адаптивное изображение гриба</em></p>
+
+        <hr>
+
+        <h2>Подпись к изображению</h2>
+        <p>Для группирования изображений и подписей используется элемент <code>figure</code> с <code>figcaption</code>.</p>
+        
+        <p><b>Задание 5.</b> Вставьте на страницу изображение <code>globus.gif</code> с подписью к нему.</p>
+        <figure>
+            <img src="images/globus.gif" alt="Глобус" width="250">
+            <figcaption>Рисунок 5: Земной глобус</figcaption>
+        </figure>
+
+        <hr>
+
+        <h2>Элемент picture</h2>
+        <p>Элемент <code>picture</code> позволяет выбрать оптимальный формат изображения в зависимости от поддержки браузером.</p>
+        
+        <p><b>Задание 6.</b> Вставьте изображение <code>html5-logo</code> в формате SVG или PNG.</p>
+        <figure>
+            <picture>
+                <source srcset="images/html5-logo.svg" type="image/svg+xml">
+                <img src="images/html5-logo.png" alt="Логотип HTML5" width="150">
+            </picture>
+            <figcaption>Рисунок 6: Логотип HTML5 (SVG/PNG)</figcaption>
+        </figure>
+
+        <hr>
+
+        <h2>Оптимизация изображений</h2>
+        <p>Современные форматы WebP и AVIF обеспечивают лучшее сжатие при сохранении качества.</p>
+        
+        <p><b>Задание 7.</b> Добавьте изображения в форматах WebP и AVIF:</p>
+        
+        <figure>
+            <picture>
+                <source srcset="images/muscle.webp" type="image/webp">
+                <img src="images/muscle.png" alt="Мышцы человека" width="300">
+            </picture>
+            <figcaption>Рисунок 7: Анатомия мышц (WebP/PNG)</figcaption>
+        </figure>
+        
+        <figure>
+            <picture>
+                <source srcset="images/light.avif" type="image/avif">
+                <img src="images/light.gif" alt="Лампочка" width="200">
+            </picture>
+            <figcaption>Рисунок 8: Лампочка (AVIF/GIF)</figcaption>
+        </figure>
+    </main>
+</body>
+</html>
