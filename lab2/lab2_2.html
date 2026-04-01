@@ -28,6 +28,7 @@
         caption {
             font-weight: bold;
             margin-bottom: 10px;
+            /* caption-side: top; - по умолчанию, но можно указать явно */
         }
     </style>
 </head>
@@ -39,8 +40,8 @@
         
         <!-- Таблица 1 -->
         <div>
-            <caption>1-я таблица</caption>
             <table>
+                <caption>1-я таблица</caption> <!-- Исправлено: перемещено внутрь table -->
                 <tr>
                     <th rowspan="2">1</th>
                     <td colspan="2">2</td>
@@ -54,8 +55,8 @@
 
         <!-- Таблица 2 -->
         <div>
-            <caption>2-я таблица</caption>
             <table>
+                <caption>2-я таблица</caption> <!-- Исправлено -->
                 <tr>
                     <th colspan="2">1</th>
                 </tr>
@@ -71,8 +72,8 @@
 
         <!-- Таблица 3 -->
         <div>
-            <caption>3-я таблица</caption>
             <table>
+                <caption>3-я таблица</caption> <!-- Исправлено -->
                 <tr>
                     <td>1</td>
                     <td rowspan="3">2</td>
@@ -88,8 +89,8 @@
 
         <!-- Таблица 4 -->
         <div>
-            <caption>4-я таблица</caption>
             <table>
+                <caption>4-я таблица</caption> <!-- Исправлено -->
                 <tr>
                     <th colspan="2">1</th>
                 </tr>
