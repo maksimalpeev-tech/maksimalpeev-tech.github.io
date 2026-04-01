@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<голова>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Таблицы</title>
+<style>
+стол {
+	ширина: 200 пикселей;
+	граница: 1 пиксель, сплошной серый;
+	отступ: 20px;
+	float: left;
+}
+тд, тх {
+	граница: 1 пиксель, сплошной серый;
+	padding: 30px;
+}
+</style>
+</head>
+<тело>
+	<таблица>
+		<caption>1-й шаблон таблицы</caption>
+		<tbody>
+		<tr>
+			<th>1</th>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<th>4</th>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		</tbody>
+	</table>
+
+	<таблица>
+		<caption>2-й шаблон таблицы</caption>
+		<tbody>
+		<tr>
+			<th>1</th>
+			<th>2</th>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>6</td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>
