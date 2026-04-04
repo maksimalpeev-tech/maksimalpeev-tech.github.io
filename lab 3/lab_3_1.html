@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 3.1 — Внутренние стили</title>
+    <style>
+        /* Базовые цвета и шрифт */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-family: system-ui, sans-serif;
+            margin: 0;
+        }
+
+        /* Обёртка */
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        /* Заголовки */
+        h1, h2 {
+            text-align: right;
+            font-family: sans-serif;
+            color: #ff5252;
+            margin: 0 0 1rem 0;
+        }
+
+        /* Абзацы */
+        p {
+            text-align: right;
+            margin: 0 0 1rem 0;
+        }
+
+        /* Курсив — термины */
+        em {
+            color: #69f0ae;
+            font-style: italic;
+        }
+
+        /* Горизонтальная линия */
+        hr {
+            border: 0;
+            border-top: 2px solid #fff;
+            margin: 2rem 0;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <article>
+            <h1>Приватные и публичные программы</h1>
+            <h2>Приватные программы</h2>
+            <p><em>Приватными программами</em> я называю те, которые будут использоваться только вами (их разработчиками) или очень ограниченным кругом других людей, чьи навыки, требования и компьютеры хорошо известны.</p>
+            <h2>Публичные программы</h2>
+            <p><em>Публичные программы</em> — прямая противоположность приватным. Они распространяются среди большого числа людей.</p>
+            <p><strong>Лу Гринзоу</strong></p>
+        </article>
+        <hr>
+        <article>
+            <h1>Великая теорема Ферма</h1>
+            <p><b>Великая теорема Ферма́</b> (или <b>последняя теорема Ферма</b>) — одна из самых популярных теорем математики. Сформулирована французским математиком Пьером Ферма в 1637 году.</p>
+            <h2>Формулировка</h2>
+            <p>Теорема утверждает, что для любого натурального числа \(n>2\) уравнение \[a^n + b^n = c^n\] не имеет решений в целых ненулевых числах \(a, b, c.\)</p>
+        </article>
+    </div>
+</body>
+</html>

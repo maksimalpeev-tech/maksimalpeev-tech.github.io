@@ -1,0 +1,139 @@
+/* ========================================
+   Подключение сброса стилей (выберите один)
+   ======================================== */
+@import "reset.css";
+/* @import "bootstrap-reboot.css"; */
+
+/* ========================================
+   Базовые настройки
+   ======================================== */
+body {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: #f8f9fa;
+    /* Бесшовный фон (замените на свой паттерн) */
+    background-image: 
+        radial-gradient(#dee2e6 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: #212529;
+}
+
+/* ========================================
+   Обёртка
+   ======================================== */
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* ========================================
+   Заголовки (Roboto + красный + справа)
+   ======================================== */
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    text-align: right;
+    color: #c62828;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.75rem; }
+
+/* ========================================
+   Абзацы (справа)
+   ======================================== */
+p {
+    text-align: right;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+/* ========================================
+   Курсив (термины — зелёный)
+   ======================================== */
+em {
+    font-style: italic;
+    color: #2e7d32;
+}
+
+/* ========================================
+   Strong (Caveat + акцент)
+   ======================================== */
+strong {
+    font-family: 'Caveat', cursive;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1565c0;
+    display: block;
+    text-align: right;
+}
+
+/* ========================================
+   Статьи (карточки с рамкой)
+   ======================================== */
+article {
+    background: #ffffff;
+    border: 2px solid #6c757d;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ========================================
+   Горизонтальная линия
+   ======================================== */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6c757d, transparent);
+    margin: 2rem 0;
+}
+
+/* ========================================
+   Формулы (MathJax) — выравнивание
+   ======================================== */
+.MathJax {
+    display: block !important;
+    text-align: center !important;
+    margin: 1rem 0 !important;
+}
+
+/* ========================================
+   Ссылки
+   ======================================== */
+a {
+    color: #1976d2;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* ========================================
+   Адаптив для мобильных
+   ======================================== */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+    h1 { font-size: 1.75rem; }
+    h2 { font-size: 1.5rem; }
+    strong { font-size: 1.8rem; }
+    article {
+        padding: 16px;
+        margin: 16px 0;
+    }
+}
