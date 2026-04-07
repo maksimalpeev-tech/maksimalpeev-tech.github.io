@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Оформление вертикального меню (Font Awesome)</title>
+
+<!-- Подключение Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+html {
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    width: 220px;
+    background: #fff;
+    padding: 15px;
+    margin: 20px;
+    border: 1px solid #ccc;
+}
+
+
+.menu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > ul > li {
+    position: relative;
+    margin: 5px 0;
+}
+
+
+.menu > ul > li > .item-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+
+.menu > ul > li > .item-wrapper a {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 8px; 
+    display: block;
+    width: 100%;
+}
+
+
+.menu > ul > li > .item-wrapper i {
+    width: 16px;
+    text-align: center;
+    color: #369;
+    font-size: 14px;
+}
+
+
+.menu li ul {
+    list-style: none;
+    display: none; 
+    padding-left: 24px; 
+    margin: 0;
+}
+
+
+.menu li:hover > ul {
+    display: block;
+}
+
+
+.menu li li {
+    margin: 3px 0;
+    position: relative;
+}
+
+
+.menu li li .item-wrapper {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+    line-height: 20px;
+}
+
+.menu li li .item-wrapper a {
+    text-decoration: none;
+    color: inherit;
+    padding-left: 8px;
+    display: block;
+    width: 100%;
+}
+
+
+.menu li li .item-wrapper i {
+    width: 16px;
+    text-align: center;
+    color: #369;
+    font-size: 12px; 
+}
+
+
+.menu li a:hover, 
+.menu li li a:hover {
+    text-decoration: underline;
+    color: #369;
+}
+</style>
+</head>
+<body>
+
+<nav class="menu">
+    <ul>
+        <li>
+            <div class="item-wrapper">
+                <i class="fa-regular fa-square-plus icon-toggle"></i>
+                <a href="#">Фильмы</a>
+            </div>
+            <ul>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Экшн</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Мелодрамы</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Сериалы</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Семейные</a></div></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="item-wrapper">
+                <i class="fa-regular fa-square-plus icon-toggle"></i>
+                <a href="#">Музыка</a>
+            </div>
+            <ul>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Классика</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Джаз</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Рок</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Грандж</a></div></li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="item-wrapper">
+                <i class="fa-regular fa-square-plus icon-toggle"></i>
+                <a href="#">Софт</a>
+            </div>
+            <ul>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Графика</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">3D-моделирование</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Машинопись</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Переводчики</a></div></li>
+            </ul>
+        </li>
+
+
+        <li>
+            <div class="item-wrapper">
+                <i class="fa-regular fa-square-plus icon-toggle"></i>
+                <a href="#">Игры</a>
+            </div>
+            <ul>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">РПГ</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Шутеры</a></div></li>
+                <li><div class="item-wrapper"><i class="fa-regular fa-circle-dot"></i><a href="#">Пасьянсы</a></div></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<script>
+    const items = document.querySelectorAll('.menu > ul > li');
+
+    items.forEach(item => {
+        const icon = item.querySelector('.icon-toggle');
+        
+        item.addEventListener('mouseenter', () => {
+            icon.classList.remove('fa-square-plus');
+            icon.classList.add('fa-square-minus');
+        });
+
+        item.addEventListener('mouseleave', () => {
+            icon.classList.remove('fa-square-minus');
+            icon.classList.add('fa-square-plus');
+        });
+    });
+</script>
+
+</body>
+</html>
