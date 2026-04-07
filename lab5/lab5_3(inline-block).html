@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>inline-block</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		.wrapper {
+			width: 1000px;
+			margin: auto;
+			font-size: 0;
+		}
+
+		#left, #center, #right {
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+		}
+
+		#left {
+			width: 200px;
+			background: #ccf;
+		}
+
+		#center {
+			width: 600px;
+			background: #cfc;
+		}
+
+		#right {
+			width: 200px;
+			background: #fcc;
+		}
+	</style>
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div id="left">
+		left<br>left<br>left<br>left<br>left
+	</div>
+
+	<div id="center">
+		Stellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar StoreStellar Store.
+
+	<div id="right">
+		right<br>right<br>right<br>right
+	</div>
+
+</div>
+
+</body>
+</html>
